@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-0 col-s-2 col-md-2 col-lg-2"></div>
+
+		<div class="col-xs-12 col-s-8 col-md-8 col-lg-8">
+			<div class="row">
+
+				<div class="container roster" id="searchTextResults">
+					<form class="form-inline">
+						<input ng-model="query.name" type="text" placeholder="Filter by" autofocus>
+					</form>
+					
+					<div class="hero" ng-repeat="hero in heroes | filter:query | orderBy: 'name'">
+						<a href="#/">
+							<img class="iconify roster-image" ng-show="hero.show" ng-src="{{hero.image}}" ng-click="setHero(hero)" tooltip-placement="bottom" tooltip="{{hero.name}}"></img>		
+						</a>
+					</div>
+
+				</div>
+
+			<div class="container" ng-show="selected">
+				<div  class="selected-hero">
+					<hero-panel info="curHero"></hero-panel>
+				</div>
+			</div>
+
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-s-2 col-md-2 col-lg-2"></div>
+	</div>
+</div>

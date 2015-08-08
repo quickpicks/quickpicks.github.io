@@ -1,0 +1,19 @@
+<div class='col-s-0 col-m-2'></div>
+<div class='col-s-12 col-m-8'>
+	<div class="col-md-12">
+		<img class="image" ng-src="{{info.image}}"/>
+		<div class="name">
+			<h1>{{info.name}}</h1><h3><small>{{info.title}}</small></h3>
+		</div>
+		<div class="builds">
+			<div class="build">
+				<div class="ability" ng-repeat="build in info.build track by $index">
+					<img tooltip="{{build.name}}" ng-src="{{build.image}}"/>
+					<tal-choice info='build'></tal-choice>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<div class='col-s-0 col-m-2'></div>

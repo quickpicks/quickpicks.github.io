@@ -1,0 +1,5 @@
+
+<ul>
+	<button ng-click="changeTrue()">Reset</button>
+	<ul ng-repeat="hero in heroes | orderBy: 'name'"><input type="checkbox" ng-model="hero.show">{{hero.name}}</input></ul>
+</ul>		
